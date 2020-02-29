@@ -1,0 +1,19 @@
+# Cree un script en powershell
+https://www.windowscentral.com/how-create-and-run-your-first-powershell-script-file-windows-10
+
+# Definir au startup de la session le script
+
+# Detecte le moniteur connecté
+Si le moniteur est celui de la TV Alors
+    On lance uniquement steam en mode big picture
+Sinon 
+    On lance les autres programmes
+
+# Pour se connecter directement à steam en bigpicture
+D:\Steam\steam.exe -bigpicture
+
+# Liste des autres programmes
+  Dashlane
+  Mega
+  Syncthing
+  ....
