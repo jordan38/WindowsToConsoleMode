@@ -1,5 +1,6 @@
-# $pcMonitor = "DISPLAY\SAM0B65\5&8fb9b9b&0&UID4353_0";
-$tvMonitor = "DISPLAY\GSM0001\5&8fb9b9b&0&UID4353_0";
+# $pcMonitor = "SAM0B65";
+$tvMonitor = "GSM0001";
+$tvMonitorIndex = 1
 
 function isTvMonitor {
     param(
@@ -19,7 +20,7 @@ function pcProgram() {
 }
 
 $monitor = Get-CimInstance -Namespace root\wmi -ClassName wmimonitorid;
-$instanceName = $monitor.InstanceName;
+$instanceName = $monitor.InstanceName.split('\')[$tvMonitorIndex];
 
 if (isTvMonitor $instanceName) {
     consoleProgram;
